@@ -7,12 +7,9 @@ import technologyNamesHandlers from "./routes/technologyName.routes.js";
 
 const app = express();
 const port = process.env.PORT || 9000;
+app.use(express.json());
 
 connectToMongoDB();
-
-app.get("/", (req, res) => {
-  res.send("Hello, World!");
-});
 
 app.use("/api/projects", projectRouteHandlers);
 app.use("/api/technology-names", technologyNamesHandlers);
