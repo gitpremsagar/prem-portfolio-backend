@@ -2,7 +2,7 @@ import mongoose from "mongoose";
 const Schema = mongoose.Schema;
 
 const TechnologyNameSchema = new Schema({
-  name: "String",
+  technologyName: "String",
   description: "String",
 });
 
